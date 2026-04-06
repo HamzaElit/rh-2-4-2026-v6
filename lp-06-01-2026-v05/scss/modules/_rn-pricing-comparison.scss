@@ -1,0 +1,46 @@
+.rn-pricing-comparison {
+  background-color: var(--Secondary-3);
+  padding: 5rem 0;
+  overflow: hidden;
+
+  @include lg-up {
+    padding: 8rem 0;
+  }
+
+  .rn-pricing-comparison__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    max-width: 95rem;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-areas:
+      "title"
+      "chart"
+      "button";
+
+    @include lg-up {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "chart title"
+        "chart button";
+      gap: 4rem 15rem;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    align-self: flex-end;
+    grid-area: title;
+    color: var(--Primary);
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+
+    @include md-up {
+      font-size: 4rem;
+    }
+  }
+
+}

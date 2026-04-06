@@ -1,0 +1,159 @@
+.rn-rhinoplasty__cta{
+  padding: 3.5rem 0;
+  @include lg-up {
+    padding: 6rem 0;
+  }
+}
+.rn-pricing-comparison{
+ &__chart-wrapper {
+    grid-area: chart;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @include lg-up {
+      justify-content: flex-start;
+    }
+  }
+
+  &__chart {
+    width: 100%;
+    max-width: 50rem;
+    height: auto;
+
+    @include lg-up {
+      max-width: 60rem;
+    }
+  }
+
+  .btns-wrp {
+    grid-area: button;
+
+    @include lg-up {
+      justify-content: flex-start;
+    }
+  }
+
+  &__cta-banner {
+    grid-area: cta-banner;
+    background-color: var(--Secondary);
+    border-radius: 3.2rem;
+    padding: 2.4rem 2.4rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.6rem;
+    align-items: flex-end;
+
+    @include lg-up {
+      align-items: center;
+      margin-top: 0;
+      padding: 3.6rem 5rem;
+      gap: 4rem;
+    }
+  }
+
+  &__cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  &__cta-title {
+    color: var(--Primary);
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+
+    @include lg-up {
+      font-size: 4rem;
+    }
+  }
+
+  &__cta-text {
+    color: var(--Primary);
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 0;
+    max-width: 430px;
+
+    @include lg-up {
+      font-size: 2rem;
+    }
+  }
+
+  &__cta-arrow-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__cta-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Primary);
+    border-radius: 2rem;
+    width: 7.5rem;
+    height: 7.2rem;
+    flex-shrink: 0;
+    color: var(--Secondary);
+    transition: transform 0.3s ease;
+
+    @include lg-up {
+      width: 13.4rem;
+      height: 12.9rem;
+      border-radius: 3.2rem;
+      margin: 0;
+    }
+
+    svg {
+      width: 3.2rem;
+      height: auto;
+      transition: transform 0.3s ease;
+
+      path {
+        stroke: currentColor;
+        fill: none;
+      }
+
+      @include lg-up {
+        width: 6rem;
+      }
+    }
+
+    &:hover {
+      svg {
+        transform: translateX(0.6rem);
+      }
+    }
+  }
+}
+.rn-pricing-comparison__cta-arrow {
+  animation: shake-left-right 1.2s ease-in-out infinite;
+}
+@keyframes shake-left-right {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  25% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+
+  50% {
+    -webkit-transform: translateX(-5px);
+    transform: translateX(-5px);
+  }
+
+  75% {
+    -webkit-transform: translateX(5px);
+    transform: translateX(5px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}

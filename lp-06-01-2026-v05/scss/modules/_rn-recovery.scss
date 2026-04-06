@@ -1,0 +1,136 @@
+.rn-recovery {
+  padding: 4rem 0;
+
+  @include lg-up {
+    padding: 8rem 0;
+  }
+
+  &__header {
+    margin-bottom: 3.2rem;
+
+    @include lg-up {
+      margin-bottom: 4.8rem;
+    }
+  }
+
+  &__title {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: var(--Black);
+    margin: 0 0 1.6rem;
+
+    @include lg-up {
+      font-size: 4.8rem;
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__title-br {
+    display: block;
+    
+    @include lg-up {
+      display: none;
+    }
+  }
+
+  &__subtitle {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--Primary);
+    margin: 0;
+    text-transform: uppercase;
+    max-width: 33rem;
+
+    @include lg-up {
+      font-size: 2.4rem;
+      max-width: 70rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background-color: var(--Primary);
+
+    @include lg-up {
+      flex-direction: row;
+      align-items: center;
+      background-color: transparent;
+      overflow: visible;
+      border-radius: 0;
+    }
+  }
+
+  &__image-wrapper {
+    width: 100%;
+
+    @include lg-up {
+        position: relative;
+        z-index: 2;
+      width: 48%;
+      border-radius: 2.4rem;
+      overflow: hidden;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__box {
+    background-color: var(--Primary);
+    padding: 3.2rem 2.4rem;
+
+    @include lg-up {
+      width: 57%;
+      margin-left: -5%;
+      padding: 4.8rem 4rem;
+      border-radius: 2.4rem;
+      padding-left: 7.5%;
+      z-index: 1;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include lg-up {
+      gap: 2.4rem;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: var(--White);
+
+    @include lg-up {
+      font-size: clamp(1.8rem, 2vw, 3rem);
+      gap: 1.5rem;
+    }
+  }
+
+  &__icon {
+    width: 2.4rem;
+    height: auto;
+    flex-shrink: 0;
+
+    @include lg-up {
+      width: 2.8rem;
+    }
+  }
+}
