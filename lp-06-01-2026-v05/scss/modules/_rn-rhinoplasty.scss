@@ -27,8 +27,6 @@
   }
 
   .btns-wrp {
-    grid-area: button;
-
     @include lg-up {
       justify-content: flex-start;
     }
